@@ -33,6 +33,9 @@ $routes->get('/', 'Home::index');
 $routes->get('/ajax', 'Home::ajax');
 $routes->get('/get', 'Home::get');
 $routes->get('/error', 'Home::error');
+$routes->get('/aku/error', 'Home::error');
+$routes->get('/debug', 'Home::insert');
+$routes->post('/debug', 'Home::insert');
 
 /*
  * --------------------------------------------------------------------

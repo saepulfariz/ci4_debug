@@ -19,24 +19,24 @@ $response = Services::response();
 $response->setStatusCode(http_response_code());
 // $response->getStatusCode() . ' - ' . $response->getReasonPhrase();
 
-$data_log = [
-    'title' => $title,
-    'type' => $title,
-    'base_url' => base_url(),
-    // 'file' => esc(clean_path($file)),
-    'file' => $file,
-    // 'file' => clean_path($file),
-    'line' => esc($line),
-    // 'code' => $exception->getCode(),
-    'code' => $response->getStatusCode(),
-    'code_detail' => $response->getReasonPhrase(),
-    'message' => nl2br(esc($exception->getMessage())),
-    'created_at' => date('Y-m-d H:i:s'),
-    'trace' => $trace,
-];
-$myfile = fopen('result_' . date('ymdhis') . '.json', 'w');
-fwrite($myfile, json_encode($data_log));
-fclose($myfile);
+// $data_log = [
+//     'title' => $title,
+//     'type' => $title,
+//     'base_url' => base_url(),
+//     // 'file' => esc(clean_path($file)),
+//     'file' => $file,
+//     // 'file' => clean_path($file),
+//     'line' => esc($line),
+//     // 'code' => $exception->getCode(),
+//     'code' => $response->getStatusCode(),
+//     'code_detail' => $response->getReasonPhrase(),
+//     'message' => nl2br(esc($exception->getMessage())),
+//     'created_at' => date('Y-m-d H:i:s'),
+//     'trace' => $trace,
+// ];
+// $myfile = fopen('result_' . date('ymdhis') . '.json', 'w');
+// fwrite($myfile, json_encode($data_log));
+// fclose($myfile);
 
 /*
 
@@ -440,6 +440,7 @@ fclose($myfile);
                 <?php if (!empty($headers)) : ?>
 
                     <h3>Headers</h3>
+
 
                     <table>
                         <thead>

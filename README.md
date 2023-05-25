@@ -6,6 +6,9 @@
 /ajax ajax interval 5 seconds
 /get test error connection database
 /error test error connection database
+/aku/error
+/debug POST kirim JSON pake CURL
+
 
 ## SAVE CUSTOM DEBUG
 
